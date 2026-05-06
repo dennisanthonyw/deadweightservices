@@ -9,14 +9,14 @@
   <meta name="description" content="Deadweight Services — Fast, reliable junk removal, hauling &amp; cleanouts in Ventura County. Same-day service available. Call (805) 366-3147">
   <meta name="keywords" content="junk removal Ventura County, junk hauling Oxnard, cleanouts Camarillo, estate cleanout Thousand Oaks, debris removal Simi Valley, trash hauling Ventura">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://deadweightservices.com">
+  <link rel="canonical" href="https://www.deadweightservices.com">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://deadweightservices.com">
+  <meta property="og:url" content="https://www.deadweightservices.com">
   <meta property="og:title" content="Deadweight Services | Junk Removal Ventura County">
   <meta property="og:description" content="We Haul The Heavy Stuff. Same-day junk removal &amp; cleanouts across Ventura County. Call (805) 366-3147">
-  <meta property="og:image" content="https://deadweightservices.com/og-image.jpg">
+  <meta property="og:image" content="https://www.deadweightservices.com/og-image.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -857,27 +857,8 @@
 
     /* ── MOBILE ── */
     .hamburger { display: none; }
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
-      .areas-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-      }
-      .gallery-item:first-child { grid-column: span 2; grid-row: auto; }
-      .steps::before { display: none; }
-      .steps { gap: 2rem; }
-      .hero-stats { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item:first-child { grid-column: span 1; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr; gap: 1px; }
-    }
+    
+    
   
     /* ── TESTIMONIALS ── */
     .testimonials { background: var(--dark); padding: 6rem 2rem; }
@@ -1043,9 +1024,7 @@
       color: #555;
       margin-top: -0.4rem;
     }
-    @media (max-width: 640px) {
-      .form-row { grid-template-columns: 1fr; }
-    }
+    
 
   
     /* ── INSTAGRAM ── */
@@ -1143,13 +1122,8 @@
       font-size: 0.85rem;
       margin-top: 0.6rem;
     }
-    @media (max-width: 900px) {
-      .ig-feed { grid-template-columns: repeat(2, 1fr); }
-      .instagram-header { flex-direction: column; align-items: flex-start; }
-    }
-    @media (max-width: 540px) {
-      .ig-feed { grid-template-columns: 1fr; }
-    }
+    
+    
 
   
     /* ── FORM SUCCESS STATE ── */
@@ -1201,6 +1175,141 @@
     .btn-submit.loading i { animation: spin 0.8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
+  
+    /* ═══════════════════════════════════════
+       RESPONSIVE — consolidated mobile styles
+       ═══════════════════════════════════════ */
+
+    /* ── TABLET (≤900px) ── */
+    @media (max-width: 900px) {
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-logo-text strong { font-size: 1.4rem; }
+
+      /* Hero */
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 6rem 1.5rem 4rem;
+        text-align: center;
+      }
+      .hero-card { display: none; }
+      .hero h1 { font-size: clamp(3rem, 10vw, 5rem); }
+      .hero p { font-size: 1.1rem; margin: 0 auto 2rem; }
+      .hero-ctas { justify-content: center; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .hero-tag { justify-content: center; }
+
+      /* Sections */
+      section { padding: 4rem 1.5rem; }
+      .container { padding: 0; }
+      .section-header h2 { font-size: clamp(2rem, 6vw, 3rem); }
+      .section-header { margin-bottom: 2.5rem; }
+
+      /* Services */
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Steps */
+      .steps { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+      .steps::before { display: none; }
+
+      /* Pricing */
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Gallery */
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gallery-item:first-child { grid-column: span 2; grid-row: auto; }
+
+      /* Areas */
+      .areas-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .areas-list { grid-template-columns: repeat(2, 1fr); }
+
+      /* Testimonials */
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      /* Instagram */
+      .ig-feed { grid-template-columns: repeat(2, 1fr); }
+      .instagram-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+      /* CTA Band */
+      .cta-band { padding: 3.5rem 1.5rem; }
+      .cta-band h2 { font-size: clamp(2rem, 7vw, 3.5rem); }
+
+      /* Footer */
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    /* ── MOBILE (≤600px) ── */
+    @media (max-width: 600px) {
+      /* Nav */
+      .nav-inner { padding: 0 1rem; }
+      .btn-call { padding: 10px 14px; font-size: 0.9rem; }
+      .nav-logo-text { display: none; }
+      .nav-logo img { height: 52px; }
+
+      /* Trust bar */
+      .trust-scroll span { padding: 0.7rem 1rem; font-size: 0.78rem; }
+
+      /* Hero */
+      .hero-inner { padding: 5rem 1rem 3rem; }
+      .hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+      .hero p { font-size: 1rem; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .stat strong { font-size: 1.8rem; }
+      .stat span { font-size: 0.7rem; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 1.8rem 1.5rem; }
+
+      /* Steps */
+      .steps { grid-template-columns: 1fr; gap: 2rem; }
+
+      /* Pricing */
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card.featured { margin-top: 0; }
+
+      /* Gallery */
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: span 1; }
+      .gallery-grid { grid-template-rows: auto; }
+
+      /* Areas */
+      .areas-list { grid-template-columns: 1fr; }
+      .areas-iframe-wrap iframe { height: 300px; }
+
+      /* Testimonials */
+      .testimonial-card { padding: 1.6rem 1.4rem; }
+
+      /* Instagram */
+      .ig-feed { grid-template-columns: 1fr; }
+      .ig-post-wrap { min-height: 380px; }
+      .btn-follow { width: 100%; justify-content: center; }
+
+      /* Quote form */
+      .form-row { grid-template-columns: 1fr; }
+      .quote-section { padding: 4rem 1rem; }
+
+      /* Footer */
+      .footer-inner { padding: 0 1rem; }
+      footer { padding: 3rem 1rem 1.5rem; }
+    }
+
+    /* ── SMALL MOBILE (≤400px) ── */
+    @media (max-width: 400px) {
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .stat { padding: 1rem 0.5rem; }
+      .stat strong { font-size: 1.5rem; }
+      .nav-logo img { height: 44px; }
+      .btn-call span { display: none; }
+      .btn-call { padding: 10px 16px; }
+      .hero h1 { font-size: clamp(2.2rem, 12vw, 3rem); }
+    }
   </style>
 </head>
 <body>
@@ -1767,11 +1876,11 @@
     "@type": "LocalBusiness",
     "name": "Deadweight Services",
     "description": "Fast, reliable junk removal, hauling, and cleanouts in Ventura County. Same-day service available.",
-    "url": "https://deadweightservices.com",
+    "url": "https://www.deadweightservices.com",
     "telephone": "+1-805-366-3147",
     "email": "Deadweightservicesllc@gmail.com",
-    "logo": "https://deadweightservices.com/logo.png",
-    "image": "https://deadweightservices.com/og-image.jpg",
+    "logo": "https://www.deadweightservices.com/logo.png",
+    "image": "https://www.deadweightservices.com/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ventura",
